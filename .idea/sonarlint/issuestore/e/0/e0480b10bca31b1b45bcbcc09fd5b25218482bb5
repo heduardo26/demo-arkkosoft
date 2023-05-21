@@ -1,0 +1,18 @@
+
+[
+java:S1128"9Remove this unused import 'com.example.demo.entity.User'.(„İĞúÿÿÿÿ8ÃöÎƒ1
+c
+java:S1128"GRemove this unused import 'com.example.demo.repository.UserRepository'.(Šı¦58‚ÃöÎƒ1
+^
+java:S1128"ARemove this unused import 'com.example.demo.service.UserService'.(ğ€·’8ƒÃöÎƒ1
+u
+java:S1128"SRemove this unused import 'org.springframework.beans.factory.annotation.Autowired'.(¡¸Îùÿÿÿÿ8ƒÃöÎƒ1
+X
+java:S1128
+";Remove this unused import 'javax.annotation.PostConstruct'.(›ÅÁ8ƒÃöÎƒ1
+M
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8„ÃöÎƒ1
+Z
+java:S1128"8Remove this unused import 'java.util.stream.Collectors'.(Óóº´úÿÿÿÿ8„ÃöÎƒ1
+Q
+java:S1128"4Remove this unused import 'java.util.stream.Stream'.(ó÷”8„ÃöÎƒ1
