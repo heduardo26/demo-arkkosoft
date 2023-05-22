@@ -25,9 +25,9 @@
 -------------------------------------------------------------------
 
 ## Funcionamiento
-Para usar el sistema debemos registrar usuarios y luego hacer login, ya existen un usuario registrado de forma 
+Para usar el sistema primero debemos registrar un usuario y luego hacer login, ya existen un usuario registrado de forma 
 predeterminada en la Base de Datos (root@gmail.com, admin123). Al momento de hacer login este nos generara un 
-Token que usaremos para acceder en los demas endpoint del sistemas que listan a continuación. 
+Token que usaremos para acceder en los demas endpoint del sistema que se listan a continuación: 
 
 
 - Crear usuario:
@@ -77,4 +77,4 @@ Token que usaremos para acceder en los demas endpoint del sistemas que listan a 
 -------------------------------------------------------------------
 
 - Eliminar Usuario
- * http://localhost:8080/user/{UserEmail}
+  * http://localhost:8080/user/{UserEmail}
