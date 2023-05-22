@@ -35,9 +35,9 @@ public class UserService {
         return userRepository.findByEmail(email);
     }
 
-    public void saveUser(User user){
+    public User saveUser(User user){
         if(Boolean.TRUE.equals(validateEmail(user.getEmail()))){
-            userRepository.save(user);
+             return userRepository.save(user);
         }else{
             throw new DataDuplicadeException("Usuario "+user.getEmail()+" ya existe.");
         }
