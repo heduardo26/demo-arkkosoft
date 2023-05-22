@@ -20,13 +20,14 @@
     * JDBC URL: jdbc:h2:mem:devdb
     * User Name: sa
     * Password:  password
-- Existe un script que carga las tablas necesarias (user, task) para probar el sistema.
+- Existe un script que carga las tablas necesarias (User, Task) para probar el sistema.
 - El acceso a la documentación de los servicios rest del proyecto está en (http://localhost:8080/swagger-ui.html#/)
 -------------------------------------------------------------------
 
 ## Funcionamiento
-El proceso de envío de mensajes consiste en:
-- Al envíar el mensaje se almacena en la tabla MESSAGE de la BD.
-- Se buscan todos los usuarios del grupo al que va dirigido el mensaje, excluyendo al remitente.
-- Se simula una notificacion a cada uno de los usuarios (se puede verificar a través de la consola del sistema)
+Para usar el sistema debemos registrar usuarios y luego hacer login, ya existen un usuario registrado de forma 
+predeterminada en la Base de Datos (root@gmail.com, admin123).
+Al momento de hacer login este nos generara un Token que usaremos para acceder en los demas endpoint. 
+
+- 
   
