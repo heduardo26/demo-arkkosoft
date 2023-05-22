@@ -27,7 +27,25 @@
 ## Funcionamiento
 Para usar el sistema debemos registrar usuarios y luego hacer login, ya existen un usuario registrado de forma 
 predeterminada en la Base de Datos (root@gmail.com, admin123).
+
 Al momento de hacer login este nos generara un Token que usaremos para acceder en los demas endpoint. 
 
-- 
-  
+- Crear usuario:
+  * http://localhost:8080/register
+    {
+      "userName":"user",
+      "email":"user@gmail.com",
+      "password":"user123"
+    }
+
+- Autenticar usuario:
+   * http://localhost:8080/authenticate
+     {
+       "email":"admin@gmail.com",
+       "password":"admin"
+     }
+- Obtener las tareas de un usuario
+ * http://localhost:8080/task/{UserEmail}
+
+- Obtener todas las tareas de todos los usarios (No se necesita estar autenticado)
+  * http://localhost:8080/task
