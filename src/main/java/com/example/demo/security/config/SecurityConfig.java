@@ -36,7 +36,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             "/*/swagger-resources/**",
             "/*/v2/api-docs",
             "/swagger-ui.html#/**",
-            "/swagger-ui/**", "/javainuse-openapi/**"
+            "/swagger-ui/**", "/javainuse-openapi/**",
+            "/swagger-resources/**",
+            "/swagger-ui/**",
+            "/swagger-ui/index.html",
+            "/v3/api-docs",
+            "/v2/api-docs",
+            "/webjars/**"
     };
 
     public SecurityConfig(JwtFilter jwtFilter, CustomUserDetailsService customUserDetailsService) {

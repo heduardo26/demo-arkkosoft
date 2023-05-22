@@ -25,3 +25,8 @@
 -------------------------------------------------------------------
 
 ## Funcionamiento
+El proceso de envío de mensajes consiste en:
+- Al envíar el mensaje se almacena en la tabla MESSAGE de la BD.
+- Se buscan todos los usuarios del grupo al que va dirigido el mensaje, excluyendo al remitente.
+- Se simula una notificacion a cada uno de los usuarios (se puede verificar a través de la consola del sistema)
+  

@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
+import javax.validation.ConstraintViolationException;
+
 @ControllerAdvice
 public class GlobalAPIExceptionHandler {
 
@@ -22,6 +24,15 @@ public class GlobalAPIExceptionHandler {
     @ExceptionHandler(InvalidUserException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
     public ResponseEntity<String> invalidUser(InvalidUserException exception){
+        return ResponseEntity
+                .status(HttpStatus.NOT_FOUND)
+                .body(exception.getMessage());
+    }
+
+
+    @ExceptionHandler(DataNotFoundException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public ResponseEntity<String> invalidUser(DataNotFoundException exception){
         return ResponseEntity
                 .status(HttpStatus.NOT_FOUND)
                 .body(exception.getMessage());
@@ -43,4 +54,14 @@ public class GlobalAPIExceptionHandler {
                 .status(HttpStatus.UNAUTHORIZED)
                 .body(exception.getMessage());
     }
+
+
+    @ExceptionHandler(ConstraintViolationException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    public ResponseEntity<String> sessionExpired(ConstraintViolationException exception){
+        return ResponseEntity
+                .status(HttpStatus.BAD_REQUEST)
+                .body(exception.getMessage());
+    }
+
 }
