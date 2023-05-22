@@ -8,7 +8,10 @@
 - Lombok
 - Spring Security
 - Swagger 2
-
+- 
+### Arquitectura
+Se implementó una arquitectura N-tier o de capas, en la cual existe un controlador principal que ejecuta varios servicios que son clases que contienen la lógica de negocio,
+estas clases hacen uso de los servicios de las interfaces repository.
 -------------------------------------------------------------------
 
 ## Instalación/Ejecución
@@ -25,7 +28,7 @@
 -------------------------------------------------------------------
 
 ## Funcionamiento
-Para usar el sistema primero debemos registrar un usuario y luego hacer login, ya existen un usuario registrado de forma 
+Para usar el sistema primero debemos registrar un usuario y luego hacer login, ya existe un usuario registrado de forma 
 predeterminada en la Base de Datos (root@gmail.com, admin123). Al momento de hacer login este nos generara un 
 Token que usaremos para acceder en los demas endpoint del sistema que se listan a continuación: 
 
@@ -51,7 +54,7 @@ Token que usaremos para acceder en los demas endpoint del sistema que se listan 
   * http://localhost:8080/task/{UserEmail}
 -------------------------------------------------------------------
 
-- Obtener todas las tareas de todos los usarios (No se necesita estar autenticado)
+- Obtener todas las tareas de todos los usuarios (No se necesita estar autenticado)
   * http://localhost:8080/task
 -------------------------------------------------------------------
 
@@ -78,3 +81,7 @@ Token que usaremos para acceder en los demas endpoint del sistema que se listan 
 
 - Eliminar Usuario
   * http://localhost:8080/user/{UserEmail}
+-------------------------------------------------------------------
+
+Adjunto está el archivo ***_ArkkosoftTest.postman_collection.json_*** que es una colección 
+de PostMan que se puede importar para probar el Api. 
