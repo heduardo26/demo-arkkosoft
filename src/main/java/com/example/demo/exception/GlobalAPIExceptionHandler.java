@@ -1,6 +1,5 @@
 package com.example.demo.exception;
 
-import io.jsonwebtoken.ExpiredJwtException;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +14,7 @@ public class GlobalAPIExceptionHandler {
 
     @ExceptionHandler(DataDuplicadeException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public ResponseEntity<String> DataDuplicade(DataDuplicadeException exception){
+    public ResponseEntity<String> dataDuplicade(DataDuplicadeException exception){
         return ResponseEntity
                 .status(HttpStatus.BAD_REQUEST)
                 .body(exception.getMessage());
@@ -32,7 +31,7 @@ public class GlobalAPIExceptionHandler {
 
     @ExceptionHandler(DataNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    public ResponseEntity<String> invalidUser(DataNotFoundException exception){
+    public ResponseEntity<String> notFound(DataNotFoundException exception){
         return ResponseEntity
                 .status(HttpStatus.NOT_FOUND)
                 .body(exception.getMessage());
@@ -58,7 +57,7 @@ public class GlobalAPIExceptionHandler {
 
     @ExceptionHandler(ConstraintViolationException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public ResponseEntity<String> sessionExpired(ConstraintViolationException exception){
+    public ResponseEntity<String> badRequest(ConstraintViolationException exception){
         return ResponseEntity
                 .status(HttpStatus.BAD_REQUEST)
                 .body(exception.getMessage());
