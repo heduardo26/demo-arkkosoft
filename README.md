@@ -84,5 +84,8 @@ Token que usaremos para acceder en los demas endpoint del sistema que se listan 
   * http://localhost:8080/user/{UserEmail}
 -------------------------------------------------------------------
 
+- Obtener todos los Usuarios
+  * http://localhost:8080/user
+-------------------------------------------------------------------
 Adjunto está el archivo ***_ArkkosoftTest.postman_collection.json_*** que es una colección 
 de PostMan que se puede importar para probar el Api. 
