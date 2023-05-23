@@ -8,6 +8,7 @@
 - Lombok
 - Spring Security
 - Swagger 2
+- Junit
 - 
 ### Arquitectura
 Se implementó una arquitectura N-tier o de capas, en la cual existe un controlador principal que ejecuta varios servicios que son clases que contienen la lógica de negocio,
