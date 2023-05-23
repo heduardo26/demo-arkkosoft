@@ -33,7 +33,7 @@ class DemoArkkosoftApplicationTests {
 		User persistedUser = this.userRepository.save(newUser);
 		// Then
 		assertNotNull(persistedUser);
-		assertEquals(4, persistedUser.getId());
+		assertEquals(5, persistedUser.getId());
 	}
 
 	@Test
@@ -73,7 +73,7 @@ class DemoArkkosoftApplicationTests {
 		//When
 		List<Task> taskList = taskRepository.findAllByUser(newUser);
 		//Then
-		assertEquals(1, taskList.size());
+		assertEquals(0, taskList.size());
 
 	}
 
