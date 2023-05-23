@@ -15,7 +15,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/") //TODO acá deberia de ir /api/v1/ pero por un problema con la seguridad no me lo toma
 @Api(value = "Main controller")
 public class MainController {
 
@@ -154,6 +154,17 @@ public class MainController {
     public ResponseEntity<Object> deleteUser(@PathVariable String userMail){
         userService.deleteUser(userMail);
         return new ResponseEntity("Usuario Eliminado.", HttpStatus.OK);
+    }
+
+
+    @GetMapping("/user")
+    @ApiOperation(value = "Metodo para obtener todos los usuarios")
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "success"),
+            @ApiResponse(code = 500, message = "Error en el servidor.")
+    })
+    public ResponseEntity<Object>getAllUsers(){
+        return new ResponseEntity<>(userService.getAllUser(),HttpStatus.OK);
     }
 
 

@@ -3,6 +3,7 @@ package com.example.demo.service;
 import com.example.demo.entity.AuthRequest;
 import com.example.demo.entity.Task;
 import com.example.demo.entity.User;
+import com.example.demo.entity.UserDto;
 import com.example.demo.exception.DataDuplicadeException;
 import com.example.demo.exception.DataNotFoundException;
 import com.example.demo.exception.InvalidUserException;
@@ -16,6 +17,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 @Service
 public class UserService {
@@ -74,5 +76,13 @@ public class UserService {
         }
 
         userRepository.deleteById(user.getId());
+    }
+
+    public List<UserDto> getAllUser() {
+        List<User> users = userRepository.findAll();
+
+        return users.stream().map(u -> {
+                                        return new UserDto(u.getId(), u.getUserName(), u.getEmail(), u.getTasks());
+                                    }).collect(Collectors.toList());
     }
 }

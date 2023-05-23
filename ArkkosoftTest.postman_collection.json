@@ -97,6 +97,35 @@
 			"response": []
 		},
 		{
+			"name": "Obtener Todos los Usuarios",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyb290QGdtYWlsLmNvbSIsImV4cCI6MTY4NDg4MDk3OSwiaWF0IjoxNjg0ODQ0OTc5fQ.uIlb6ccxkpZv4swuppiLcUO32Btf6TLnXB4i6rdpVGg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Obtener Tareas de un Usuario",
 			"request": {
 				"auth": {
